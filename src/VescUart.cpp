@@ -258,7 +258,7 @@ bool VescUart::getVescValues(void) {
 }
 
 bool VescUart::getVescValues(uint8_t canId) {
-
+    ESP_LOGW("VESC","getVescValues entry");
 	if (debugPort!=NULL){
 		debugPort->println("Command: COMM_GET_VALUES "+String(canId));
 	}

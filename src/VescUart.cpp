@@ -276,7 +276,7 @@ bool VescUart::getVescValues(uint8_t canId) {
 
 	uint8_t message[256];
 	int messageLength = receiveUartMessage(message);
-
+esphome::ESP_LOGW("VESC","message len = %d", messageLength);
 	if (messageLength > 55) {
 		return processReadPacket(message); 
 	}
